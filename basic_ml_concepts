@@ -1,0 +1,26 @@
+Basic concepts of Machine learning
+
+1. What is 'bias'
+    bias refers to the error introduced by approximating a real-world problem with a simplified model.
+    It represents how much the average prediction of the model differs from the true value.
+    High bias means you're not capturing the target accurately, it means your model is too simple and misses important patterns in the data.
+    High bias means your model makes same kind of error on all data points. it doesn't learn true patterns, it always points in the wrong direction.
+
+    High bias -> Consistently off (Your model is like an archer who always aims off-target in the same way) 
+    Ex. Imagine every time you shoot an arrow, it lands far to the left of the bullseye. No matter how many times you shoot, the arrows always end up in the same wrong spot.
+    
+2. What is 'variance'
+    Measures the model's sensitivity to small fluctuations in the training data.
+    It reflects how much the predictions for a given point vary between different realizations of the model trained on differnt datasets.
+    If your arrow land all over the target, you have high variance. It means you're not consistent with your shots; sometimes you're close to the bullseye, and other times you're far off.
+    High variance means your model is too complex and overly sensitive to small changes in the training data. 
+
+    High variance ->  Inconsistent (Your model is like an archer, who can't aim consistently)
+    Ex. Imagine sometimes your arrows hit the bullseye, sometimes they land far to the right, sometimes far to the left, and so on. There's no clear pattern or consistency in where your arrows land.
+    
+In SUMMARY:
+  bias : Error from trroneous assumptions in the learning algorithm. High bias can cause underfitting
+  Variance : Error from sensitivity to small fluctuations in the training set. High variance can cause overfitting.  
+  Balancing bias and variance is like an archer who aims accurately and consistently, hitting hte bullseys most of the time.
+
+    
