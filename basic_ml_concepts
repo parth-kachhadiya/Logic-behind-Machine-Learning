@@ -7,7 +7,7 @@ Basic concepts of Machine learning
     High bias means your model makes same kind of error on all data points. it doesn't learn true patterns, it always points in the wrong direction.
 
     High bias -> Consistently off (Your model is like an archer who always aims off-target in the same way) 
-    Ex. Imagine every time you shoot an arrow, it lands far to the left of the bullseye. No matter how many times you shoot, the arrows always end up in the same wrong spot.
+    Ex. Imagine every time you shoot an arrow, it lands far to the left of the bullseye(The true value or pattern we want to predict). No matter how many times you shoot, the arrows always end up in the same wrong spot.
     
 2. What is 'variance'
     Measures the model's sensitivity to small fluctuations in the training data.
@@ -22,5 +22,42 @@ In SUMMARY:
   bias : Error from trroneous assumptions in the learning algorithm. High bias can cause underfitting
   Variance : Error from sensitivity to small fluctuations in the training set. High variance can cause overfitting.  
   Balancing bias and variance is like an archer who aims accurately and consistently, hitting hte bullseys most of the time.
+
+  The goal is to find a good balance between bias and variance to minimize the total error(generalization error)
+  Total error = sum of bias squared, variance and irreducible error(noise inherent in any dataset)
+
+  Imagine 🤨.......
+        👉 High bias, Low variance
+             Arrows are clustured together but far from the bullseys.
+             The model is consistently wrong(underfitting)
+
+        👉 Low bias, High variance
+             Arrows are spread out all over the target.
+             The model captures noise in the data(overfitting)
+
+        👉 High bias, High variance
+             Arrows are scattered and also far from the bullseys.
+             The model is both too simple and too complex in different ways.
+
+        👉 Low bias, Low variance
+             Arrows are tightly clustered around bullseys.
+             The model generalizes well to new data.
+
+   High bias example
+        👉 Linear regression on non-linear data
+
+   High variance example
+        👉 Overfitting with decision tree
+                If we use a very deep decision tree, it might fit the training data prefectly(low bias) but will perform poorly on new, unseen data(high variance). Model is too complex
+
+   Mitigration strategies
+        1. reducing bias:
+            use more complex  model that can capture better patterns
+            Increase model capacity(More layers in neural network)
+
+        2. reducing variance:
+            Simpilfy the model(Ex. pruning decision tree, reducing the number of teatures)
+            Use techniques like cross-validation to esure the model generalizes  well.
+            Regularization method(Eg. L1/L2 regularization) to penalize overly complex models
 
     
